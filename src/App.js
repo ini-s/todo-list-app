@@ -15,9 +15,7 @@ export default function App() {
                     todoItems={todoItems}
                     setTodoItems={setTodoItems}
                 />
-                <Todo
-                    todoItems={todoItems}
-                />
+                <Todo />
             </main>
             <Footer />
         </div>
