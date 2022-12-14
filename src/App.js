@@ -12,7 +12,6 @@ export default function App() {
             <Header />
             <main>
                 <AddTodo
-                    todoItems={todoItems}
                     setTodoItems={setTodoItems}
                 />
                 <Todo />
