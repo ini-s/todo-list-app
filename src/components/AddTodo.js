@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/AddTodo.css'
 import uuid from 'react-uuid'
-export default function AddTodo(props) {
+export default function AddTodo({ setTodoItems }) {
     const [todoInput, setTodoInput] = useState("")
 
     function handleTodoInput(e) {
@@ -13,8 +13,7 @@ export default function AddTodo(props) {
     function addItem(e) {
         e.preventDefault()
         const newItem = { id: uuid(), value: todoInput, isDone: false }
-        props.setTodoItems(prevItems => [...prevItems, newItem])
-        console.log(props.todoItems)
+        setTodoItems(prevItems => [...prevItems, newItem])
         setTodoInput("")
     }
     return (
