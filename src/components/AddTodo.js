@@ -14,7 +14,7 @@ export default function AddTodo({ setTodoItems }) {
         e.preventDefault()
         if(!todoInput) return
         const newItem = { id: uuid(), value: todoInput, isDone: false }
-        todoInput !== "" && setTodoItems(prevItems => [...prevItems, newItem])
+        setTodoItems(prevItems => [...prevItems, newItem])
         setTodoInput("")
     }
     return (
