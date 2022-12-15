@@ -7,14 +7,11 @@
     border: none;
     background-color: #edf2f7;
     width: 18rem;
-    padding-left: 0.5rem;
     height: 100%;
     margin-right: 0.5rem;
-    font-size: 1rem;
-}
-
-.todo-input input::placeholder {
-    font-size: 1rem;
+    padding: 0.5rem;
+    padding-right: 0;
+    font-size: 1.2rem;
 }
 
 .todo-input input:focus {
