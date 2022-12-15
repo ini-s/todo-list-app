@@ -4,4 +4,12 @@
     align-items: center;
     height: 100vh;
     font-size: 1.2rem;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    color:#484b6a;
+}
+
+.App main {
+    width: 100%;
 }
