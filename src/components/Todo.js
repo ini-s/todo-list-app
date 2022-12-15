@@ -9,7 +9,6 @@ export default function Todo({ todoItems }) {
                 return <TodoItem
                     key={item.id}
                     value={item.value}
-                    todoItems={todoItems}
                 />
             })}
         </div>
