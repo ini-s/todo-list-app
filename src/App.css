@@ -13,3 +13,9 @@
 .App main {
     width: 100%;
 }
+
+@media screen and (min-width: 969px){
+    .App{
+        width: 50%;
+    }
+}
