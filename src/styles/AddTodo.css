@@ -1,5 +1,7 @@
 .todo-input {
     height: 2.5rem;
+    text-align: center;
+    color: #484b6a;
 }
 
 .todo-input input {
@@ -27,4 +29,14 @@
     border: none;
     background-color: #9733EE;
     color: #ffff;
+}
+
+@media screen and (max-width:450px) {
+    .todo-input input {
+        width: 12rem;
+    }
+
+    .todo-input .add-btn {
+        width: 3rem;
+    }
 }
