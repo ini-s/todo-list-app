@@ -19,10 +19,10 @@ export default function App() {
             <Header />
             <main>
                 <AddTodo
-                    todoItems={todoItems}
                     setTodoItems={setTodoItems}
                     editId={editId}
                     setEditId={setEditId}
+                    itemToEdit={editId ? todoItems.find((e) => e.id === editId) :undefined}
 
                 />
                 <Todo

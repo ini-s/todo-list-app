@@ -1,17 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/AddTodo.css'
 import uuid from 'react-uuid'
-export default function AddTodo({todoItems, setTodoItems, editId, setEditId}) {
-    
+export default function AddTodo({ itemToEdit, setTodoItems, editId, setEditId }) {
+
     const [todoInput, setTodoInput] = useState("")
 
-    useEffect(()=>{
-        if (editId){
-            const editItem = todoItems.find(item => item.id === editId)
-            console.log(editItem)
-            setTodoInput(editItem.value)
-        }
-    }, [editId,todoItems])
+    useEffect(() => {
+        editId && setTodoInput(itemToEdit.value)
+    }, [editId, itemToEdit])
 
     function handleTodoInput(e) {
         const newValue = e.target.value
@@ -28,7 +24,7 @@ export default function AddTodo({todoItems, setTodoItems, editId, setEditId}) {
                 return editId === item.id ? { ...item, value: editedItem } : item
             }))
             setTodoInput("")
-            setEditId()
+            setEditId("")
         }
         else {
             const newItem = { id: uuid(), value: todoInput, isDone: false }
@@ -37,8 +33,8 @@ export default function AddTodo({todoItems, setTodoItems, editId, setEditId}) {
         }
     }
 
-    
-    
+
+
     return (
         <form className="todo-input">
             <input type="text" placeholder="Add a new task" value={todoInput} onChange={handleTodoInput}>
