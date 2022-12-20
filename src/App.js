@@ -11,7 +11,8 @@ export default function App() {
     const [itemToEdit, setItemToEdit] = useState(null)
 
     function editTodo(id) {
-        setItemToEdit(id)
+        setItemToEdit(todoItems.find((e) => e.id === id))
+        console.log(itemToEdit)
     }
 
     return (
@@ -21,7 +22,7 @@ export default function App() {
                 <AddTodo
                     setTodoItems={setTodoItems}
                     setItemToEdit={setItemToEdit}
-                    itemToEdit={itemToEdit ? todoItems.find((e) => e.id === itemToEdit) :undefined}
+                    itemToEdit={itemToEdit}
                 />
                 <Todo
                     todoItems={todoItems}
