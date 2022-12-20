@@ -8,10 +8,10 @@ import './App.css'
 
 export default function App() {
     const [todoItems, setTodoItems] = useState([])
-    const [editId, setEditId] = useState()
+    const [itemToEdit, setItemToEdit] = useState(null)
 
     function editTodo(id) {
-        setEditId(id)
+        setItemToEdit(id)
     }
 
     return (
@@ -20,10 +20,8 @@ export default function App() {
             <main>
                 <AddTodo
                     setTodoItems={setTodoItems}
-                    editId={editId}
-                    setEditId={setEditId}
-                    itemToEdit={editId ? todoItems.find((e) => e.id === editId) :undefined}
-
+                    setItemToEdit={setItemToEdit}
+                    itemToEdit={itemToEdit ? todoItems.find((e) => e.id === itemToEdit) :undefined}
                 />
                 <Todo
                     todoItems={todoItems}
