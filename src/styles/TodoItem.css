@@ -1,9 +1,29 @@
 .todo-item {
     margin: 0.5rem 0;
-    padding: 0.2rem 0;
+    padding: 0.2rem 0.5rem;
     border-bottom: 1px solid #edf2f7;
+    display: flex;
 }
 
 .todo-item:last-child {
     border-bottom: none !important;
+}
+
+.todo-item p {
+    margin-right: auto;
+}
+
+.todo-item .edit {
+    margin-right: 0.5rem;
+}
+
+.todo-item .edit .icon,
+.todo-item .delete .icon {
+    color: #9733EE;
+    cursor: pointer;
+}
+
+.todo-item .edit .icon:hover,
+.todo-item .delete .icon:hover{
+    transform: scale(1.2);
 }
