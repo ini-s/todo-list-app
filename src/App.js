@@ -12,7 +12,6 @@ export default function App() {
 
     function editTodo(id) {
         setItemToEdit(todoItems.find((e) => e.id === id))
-        console.log(itemToEdit)
     }
 
     return (
@@ -27,6 +26,7 @@ export default function App() {
                 <Todo
                     todoItems={todoItems}
                     handleEdit={editTodo}
+                    setTodoItems={setTodoItems}
                 />
             </main>
             <Footer />

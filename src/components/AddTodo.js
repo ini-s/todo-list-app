@@ -4,7 +4,6 @@ import uuid from 'react-uuid'
 export default function AddTodo({ itemToEdit, setTodoItems, setItemToEdit }) {
 
     const [todoInput, setTodoInput] = useState("")
-
     useEffect(() => {
         itemToEdit && setTodoInput(itemToEdit.value)
     }, [itemToEdit])

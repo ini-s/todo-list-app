@@ -12,3 +12,18 @@
 .todo-item p {
     margin-right: auto;
 }
+
+.todo-item .edit {
+    margin-right: 0.5rem;
+}
+
+.todo-item .edit .icon,
+.todo-item .delete .icon {
+    color: #9733EE;
+    cursor: pointer;
+}
+
+.todo-item .edit .icon:hover,
+.todo-item .delete .icon:hover{
+    transform: scale(1.2);
+}
