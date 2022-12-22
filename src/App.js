@@ -30,7 +30,7 @@ export default function App() {
                 />
             </main>
             <Footer
-                todoItems={todoItems}
+                showInstruction={todoItems.length > 0}
             />
         </div>
     )

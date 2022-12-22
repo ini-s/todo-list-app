@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/Footer.css'
-export default function Footer({ todoItems }) {
+export default function Footer({ showInstruction }) {
   return (
     <footer>
-      {todoItems.length > 0 && <p>Click on item to mark as done or undone</p>}
+      {showInstruction && <p>Click on item to mark as completed</p>}
     </footer>
   )
 }
