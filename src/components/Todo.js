@@ -8,6 +8,12 @@ export default function Todo({ todoItems, handleEdit, setTodoItems }) {
         const newTodos = todoItems.filter(item => item.id !== id)
         setTodoItems(newTodos)
     }
+
+    function handleClick(id) {
+        setTodoItems(prevItems => prevItems.map(item => item.id === id ? { ...item, isDone: !item.isDone } : item))
+        console.log(todoItems)
+    }
+
     return (
         <div className="todos" style={customStyle}>
             {todoItems.map(item => {
@@ -17,6 +23,8 @@ export default function Todo({ todoItems, handleEdit, setTodoItems }) {
                     value={item.value}
                     handleEdit={() => handleEdit(item.id)}
                     handleDelete={() => deleteTodo(item.id)}
+                    handleClick={() => handleClick(item.id)}
+                    isDone={item.isDone}
                 />
             })}
         </div>
