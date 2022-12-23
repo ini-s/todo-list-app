@@ -16,7 +16,7 @@ export default function App() {
 
     useEffect(() => {
         localStorage.setItem("storedTodos", JSON.stringify(todoItems))
-    })
+    }, [todoItems])
 
     return (
         <div className="App">
